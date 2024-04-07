@@ -1,6 +1,8 @@
 import { Disclosure } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import ModalAddKit from '../ModalAddKit/ModalAddKit'
+import { IconButton } from '@radix-ui/themes'
+import { MinusCircledIcon } from '@radix-ui/react-icons'
 
 const navigation = [
   { name: 'Dashboard', href: '#', current: false },
@@ -14,6 +16,10 @@ function classNames(...classes) {
 }
 
 export default function Example() {
+  const byeToken = () => {
+    sessionStorage.removeItem("token");
+    window.location.assign("/");
+  };
   return (
     <Disclosure as="nav" className="bg-stone-950">
       {({ open }) => (
@@ -56,6 +62,10 @@ export default function Example() {
                       </a>
                     ))}
                     <ModalAddKit />
+                    <IconButton onClick={byeToken}>
+                      <MinusCircledIcon/>
+                    </IconButton>
+
                   </div>
                 </div>
               </div>
