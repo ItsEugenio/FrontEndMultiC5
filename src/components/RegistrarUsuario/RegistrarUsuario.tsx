@@ -42,7 +42,7 @@ function Register() {
     }
 
     try {
-      const response = await fetch('https://your-api-url.com/register', {
+      const response = await fetch('https:', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
