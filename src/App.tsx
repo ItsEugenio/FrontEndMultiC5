@@ -5,6 +5,7 @@ import Login from './components/Login/Login'
 import Kits from './components/pages/Kits'
 import AdminKits from './components/pages/AdminKits'
 import ReportsKit from './components/pages/ReportsKit'
+import Register from './components/RegistrarUsuario/RegistrarUsuario'
 
 function App() {
   //Branch Eugenio
@@ -16,6 +17,7 @@ function App() {
         <Route path='/kits' Component={Kits} />
         <Route path='/home-kits' Component={AdminKits} />
         <Route path='/reportes' Component={ReportsKit} />
+        <Route path='/register' Component={Register}/>
       </Routes >
     </BrowserRouter>
   )
