@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Table, Theme } from '@radix-ui/themes'
 import ModalReportKit from '../ModalReportKit/ModalReportKit';
 import ModalDeleteReport from '../ModalDeleteReport/ModalDeleteReport';

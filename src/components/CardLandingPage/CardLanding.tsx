@@ -1,12 +1,14 @@
 import React from 'react'
 import { Flex, Card, Text, Inset, Badge } from "@radix-ui/themes"
 
+interface CardInfo {
+    cardImg: string;
+    cardText: string;
+    cardCont: string;
+}
+
 interface Props {
-    cards: {
-        cardImg: string;
-        cardText: string;
-        cardCont: string;
-    }
+    cards: CardInfo[];
 }
 
 function CardLanding({ cards }: Props) {

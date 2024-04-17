@@ -1,4 +1,4 @@
-import React from 'react'
+
 import NavbarLP from '../NavBarLandingPage/NavbarLP'
 import { Flex, Section, Text, AspectRatio, Blockquote, Grid } from "@radix-ui/themes"
 import styles from '../styles/LandingPage.module.css'
