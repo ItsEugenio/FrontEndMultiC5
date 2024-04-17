@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { Flex, Card, Text, Inset, Badge } from "@radix-ui/themes"
 
 interface CardInfo {
