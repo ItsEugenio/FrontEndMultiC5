@@ -6,20 +6,17 @@
     font-weight: 800;
     font-style: normal;
 }
-.table {
-    -webkit-box-shadow: 0px 0px 99px -6px rgba(46,74,117,1);
-    -moz-box-shadow: 0px 0px 99px -6px rgba(46,74,117,1);
-    box-shadow: 0px 0px 99px -6px rgba(46,74,117,1);
-
+.tituloh2{
     font-family: "Syne", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 800;
+    font-weight: 600;
     font-style: normal;
-
-    overflow-x: auto;
-
+}
+.bodyPage{
+    height: 100vh;
+    
 }
 
-.cont{
-    margin-top: 1.5em;
+.scrollContainer {
+    overflow-x: auto;
 }

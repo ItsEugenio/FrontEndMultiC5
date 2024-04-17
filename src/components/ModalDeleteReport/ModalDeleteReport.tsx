@@ -1,7 +1,32 @@
-import { AlertDialog, Button, Flex, IconButton } from '@radix-ui/themes'
+import { AlertDialog, Button, Flex, IconButton,Text } from '@radix-ui/themes'
 import { TrashIcon } from '@radix-ui/react-icons'
+import axios from "axios";
 
-function ModalDeleteReport() {
+import styles from '../styles/AdminKits.module.css'
+
+interface Props {
+    idReport: string;
+
+}
+function ModalDeleteReport({ idReport }: Props) {
+
+    const report = idReport;
+    const token = sessionStorage.getItem("token");
+
+    const borrarReporte = async () => {
+        const headers = {
+            "Content-Type": "application/json",
+            Authorization: token,
+        };
+        try {
+            await axios.delete(`http://3.225.219.181/reportes/${report}`, {
+                headers,
+            });
+            window.location.assign("/reportes");
+        } catch (error) {
+            console.error("Error al crear el kit:", error);
+        }
+    }
     return (
         <>
             <AlertDialog.Root>
@@ -11,8 +36,8 @@ function ModalDeleteReport() {
                     </IconButton>
                 </AlertDialog.Trigger>
                 <AlertDialog.Content style={{ maxWidth: 450 }}>
-                    <AlertDialog.Title>Eliminar Reporte</AlertDialog.Title>
-                    <AlertDialog.Description size="2">
+                    <Text className={styles.titulo}>Eliminar Reporte {report}</Text>
+                    <AlertDialog.Description size="2" className={styles.tituloh2}>
                         Estas seguro que quieres eliminar este Reporte
                     </AlertDialog.Description>
 
@@ -23,7 +48,7 @@ function ModalDeleteReport() {
                             </Button>
                         </AlertDialog.Cancel>
                         <AlertDialog.Action>
-                            <Button variant="soft" color="red">
+                            <Button variant="soft" color="red" onClick={borrarReporte}>
                                 Eliminar Reporte
                             </Button>
                         </AlertDialog.Action>
