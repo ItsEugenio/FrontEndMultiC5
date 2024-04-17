@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { AlertDialog, Button, Flex, IconButton, Badge, Separator, Heading, Grid,Text } from '@radix-ui/themes'
+import { useEffect, useState } from "react";
+import { AlertDialog, Button, Flex, IconButton, Badge, Separator, Grid,Text } from '@radix-ui/themes'
 import { EyeOpenIcon } from '@radix-ui/react-icons'
 import CardImagesCam from '../CardImagesESPCAM/CardImagesCam';
 import axios from "axios";

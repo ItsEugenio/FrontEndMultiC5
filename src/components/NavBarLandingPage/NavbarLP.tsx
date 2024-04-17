@@ -1,16 +1,5 @@
 import { Disclosure } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import { IconButton } from '@radix-ui/themes'
-import { MinusCircledIcon } from '@radix-ui/react-icons'
-
-const navigation = [
-
-    { name: 'Kits', href: '/home-kits', current: true },
-]
-
-function classNames(...classes: any) {
-    return classes.filter(Boolean).join(' ')
-}
 
 function NavbarLP() {
     return (

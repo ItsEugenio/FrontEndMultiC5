@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Grid, Flex, Text } from "@radix-ui/themes"
 import TableReportsKit from "../TableReportsKit/TableReportsKit"
 import Navbar from '../Navbar/Navbar'
